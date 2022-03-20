@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Cài đặt store Redux
+import { store } from './Components/rootReducer/configStore';
+//Kết nối store Redux với react component
+import { Provider } from 'react-redux';
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
